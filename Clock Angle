@@ -1,0 +1,33 @@
+def calcAngle(h,m):
+
+  hour_angle =(h*30)+(m*30)//60
+
+  minute_angle = 6 * m
+
+  angle = abs(hour_angle - minute_angle) 
+
+  angle = min(360 - angle, angle)
+
+   
+
+  print("{:.2f}".format(angle))
+
+   
+
+if __name__ == "__main__":
+
+  a=int(input())
+
+  b=float(input())
+
+  x=(a*b)/360
+
+  x=x*60
+
+  h=x//60
+
+  h=h%12
+
+  m=x%60
+
+  calcAngle(h,m)
